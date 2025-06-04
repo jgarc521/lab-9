@@ -7,6 +7,7 @@ embed-resources: TRUE
 ---
 
 ```{r}
+#| message: false
 library(ggplot2)
 library(tibble)
 library(tidyverse)
@@ -51,6 +52,7 @@ polar_art <- function(seed, n, palette) {
 ```
 
 ```{r}
+#| warning: false
 polar_art(seed = 521, n = 100000, palette = c(c("#00FFFF", "#1B03A3", "#9F00FF", "#FF00FF")
 ))
 ```
@@ -92,7 +94,7 @@ polar_art(seed = 521, n = 100000, palette = c(c("#00FFFF", "#1B03A3", "#9F00FF",
 ```{r}
 set.seed(521)
 
-# Create a fine grid
+# create grid
 grid <- long_grid(
   x = seq(1, 20, length.out = 100),
   y = seq(1, 20, length.out = 100)
